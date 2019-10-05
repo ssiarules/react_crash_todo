@@ -4,11 +4,10 @@ class Todos extends Component {
 //function Todos() 
 render(){
     console.log(this.props.todos)
-  return (
-    <div className="App">
-      <h1> Todos</h1>
-    </div>
-  );
+  return this.props.todos.map((todo) => (
+        <h3>{todo.title}</h3>
+
+  ));
  }
 }
 
