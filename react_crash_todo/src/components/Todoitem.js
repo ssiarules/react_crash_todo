@@ -7,11 +7,11 @@ export class TodoItem extends Component {
       return {
         background: '#f4f4f4',
         padding: '10px',
+        borderBottom: '1px #ccc dotted',
         textDecoration: this.props.todo.completed ? 'line-through ' : 'none'
         
       }
   }
-
     /*
     Longer way to code function for getStyle 
     if(this.props.todo.completed){
@@ -29,7 +29,10 @@ export class TodoItem extends Component {
   render() {
     return (
       <div style={this.getStyle()}> 
-        <p> {this.props.todo.title}</p>
+        <p> 
+          <input type="checkbox" onChange={this.markComplete} />  {' '} 
+        {this.props.todo.title}
+        </p>
       </div>
     )
   }
