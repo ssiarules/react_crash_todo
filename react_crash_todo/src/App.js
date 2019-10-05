@@ -17,7 +17,7 @@ class App extends Component{
       {
         id: 2, 
         title: 'Daily Workout',
-        completed: false 
+        completed: true
       },
       {
         id: 3, 

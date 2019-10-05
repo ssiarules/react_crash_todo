@@ -14,7 +14,7 @@ render(){
 }
 
 Todos.propTypes = {
-    todos: PropTypes.object.isRequired 
+    todos: PropTypes.array.isRequired 
 }
 
 
