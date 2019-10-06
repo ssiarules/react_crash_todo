@@ -26,12 +26,14 @@ export class TodoItem extends Component {
   } 
 */
 
+
   render() {
+    const {id, title } = this.props.todo; //destructing - quicker and neater way to assign values directly from an objects. 
     return (
       <div style={this.getStyle()}> 
         <p> 
-          <input type="checkbox" onChange={this.markComplete} />  {' '} 
-        {this.props.todo.title}
+          <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} />  {' '} 
+        {title}
         </p>
       </div>
     )
